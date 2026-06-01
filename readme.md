@@ -32,8 +32,8 @@ cd Redesign-Challenge
 
 ### 3. Setup Backend & Frontend
 Untuk langkah selanjutnya, ikuti panduan di masing-masing folder:
-- 👉 [Panduan Backend](./backend/README.md)
-- 👉 [Panduan Frontend](./frontend/README.md)
+- 👉 [Panduan Backend](./backend/readme.md)
+- 👉 [Panduan Frontend](./frontend/readme.md)
 
 ---
 
