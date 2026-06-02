@@ -1,4 +1,4 @@
-const db = require('../database/database');
+const db = require('../database/db');
 
 const getAllGames = (callback) => {
     const sql = "SELECT * FROM game"

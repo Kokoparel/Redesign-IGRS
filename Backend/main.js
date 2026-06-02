@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const gameRoutes = require('./routes/gameRoutes');
+app.use(express.json());
+const PORT = process.env.PORT;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+    res.status(200).json({ message: 'Halo! Selamat datang di API Game!' });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.use('/game', gameRoutes);
+
+app.listen(PORT, () => {
+    console.log(`Server berjalan di port ${PORT}`);
 });
