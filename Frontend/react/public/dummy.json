@@ -1,0 +1,102 @@
+{
+  "payload": {
+    "data": [
+      {
+        "id": 1,
+        "game_code": "GAGT13",
+        "name": "Grand Theft Auto V",
+        "rating": 9.7,
+        "year": 2013,
+        "created_at": "2026-06-03T01:09:37.000Z",
+        "updated_at": "2026-06-03T01:09:37.000Z"
+      },
+      {
+        "id": 2,
+        "game_code": "GACS12",
+        "name": "Counter-Strike: Global Offensive",
+        "rating": 9.2,
+        "year": 2012,
+        "created_at": "2026-06-03T01:09:52.000Z",
+        "updated_at": "2026-06-03T01:09:52.000Z"
+      },
+      {
+        "id": 3,
+        "game_code": "GALOL9",
+        "name": "League of Legends",
+        "rating": 8.9,
+        "year": 2009,
+        "created_at": "2026-06-03T01:10:06.000Z",
+        "updated_at": "2026-06-03T01:10:06.000Z"
+      },
+      {
+        "id": 4,
+        "game_code": "GAVA20",
+        "name": "Valorant",
+        "rating": 8.9,
+        "year": 2020,
+        "created_at": "2026-06-03T01:10:19.000Z",
+        "updated_at": "2026-06-03T01:27:05.000Z"
+      },
+      {
+        "id": 5,
+        "game_code": "GAMC17",
+        "name": "Minecraft",
+        "rating": 9.5,
+        "year": 2011,
+        "created_at": "2026-06-03T08:00:00.000Z",
+        "updated_at": "2026-06-03T08:00:00.000Z"
+      },
+      {
+        "id": 6,
+        "game_code": "GATE24",
+        "name": "The Elder Scrolls V: Skyrim",
+        "rating": 9.6,
+        "year": 2011,
+        "created_at": "2026-06-03T08:00:00.000Z",
+        "updated_at": "2026-06-03T08:00:00.000Z"
+      },
+      {
+        "id": 7,
+        "game_code": "GAGEN18",
+        "name": "Genshin Impact",
+        "rating": 8.7,
+        "year": 2020,
+        "created_at": "2026-06-03T08:00:00.000Z",
+        "updated_at": "2026-06-03T08:00:00.000Z"
+      },
+      {
+        "id": 8,
+        "game_code": "GAMAR24",
+        "name": "Mobile Legends: Bang Bang",
+        "rating": 8.2,
+        "year": 2016,
+        "created_at": "2026-06-03T08:00:00.000Z",
+        "updated_at": "2026-06-03T08:00:00.000Z"
+      },
+      {
+        "id": 9,
+        "game_code": "GASTL24",
+        "name": "Stray",
+        "rating": 8.5,
+        "year": 2022,
+        "created_at": "2026-06-03T08:00:00.000Z",
+        "updated_at": "2026-06-03T08:00:00.000Z"
+      },
+      {
+        "id": 10,
+        "game_code": "GAHAD25",
+        "name": "Hades",
+        "rating": 9.3,
+        "year": 2020,
+        "created_at": "2026-06-03T08:00:00.000Z",
+        "updated_at": "2026-06-03T08:00:00.000Z"
+      }
+    ],
+    "message": "Data Semua Game"
+  },
+  "metadata": {
+    "prev": "",
+    "next": "",
+    "current": ""
+  }
+}
