@@ -1,180 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IGRS — Indonesia Game Rating System</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <main class="min-h-screen bg-[#fcfbf9] text-[#1a1c1e] font-sans antialiased selection:bg-[#ff3b30] selection:text-white relative">
-    
-    <!-- FINE GRAIN / DOT MATRIX BACKGROUND OVERLAY -->
-    <div class="absolute inset-0 bg-[radial-gradient(#e1dfda_1px,transparent_1px)] [bg-size:24px_24px] opacity-70 pointer-events-none"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IGRS — Indonesia Game Rating System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main
+      class="min-h-screen bg-[#fcfbf9] text-[#1a1c1e] font-sans antialiased selection:bg-[#ff3b30] selection:text-white relative"
+    >
+      <!-- FINE GRAIN / DOT MATRIX BACKGROUND OVERLAY -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#e1dfda_1px,transparent_1px)] [bg-size:24px_24px] opacity-70 pointer-events-none"
+      ></div>
 
-    <!-- TOP DECORATIVE BAR (IGRS SIGNATURE COLORS) -->
-    <div class="w-full h-2 flex">
-      <div class="flex-1 bg-[#34c759]" title="Aman / Semua Umur"></div>
-      <div class="flex-1 bg-[#ffcc00]" title="Bimbingan Orang Tua"></div>
-      <div class="flex-1 bg-[#ff9500]" title="Remaja"></div>
-      <div class="flex-1 bg-[#ff3b30]" title="Dewasa"></div>
-    </div>
-
-    <!-- HEADER NAV -->
-    <header class="relative z-10 max-w-7xl mx-auto px-8 py-8 flex justify-between items-baseline border-b border-[#e9e7e2]">
-      <div class="flex items-baseline gap-4">
-        <span class="font-serif italic text-2xl tracking-tight font-semibold text-[#1a1c1e]">
-          indonesia game rating system
-        </span>
-        <span class="text-[10px] font-mono tracking-widest uppercase bg-[#1a1c1e] text-[#fcfbf9] px-2 py-0.5">
-          RE-DESIGN CHALENGE
-        </span>
+      <!-- TOP DECORATIVE BAR (IGRS SIGNATURE COLORS) -->
+      <div class="w-full h-2 flex">
+        <div class="flex-1 bg-[#34c759]" title="Aman / Semua Umur"></div>
+        <div class="flex-1 bg-[#ffcc00]" title="Bimbingan Orang Tua"></div>
+        <div class="flex-1 bg-[#ff9500]" title="Remaja"></div>
+        <div class="flex-1 bg-[#ff3b30]" title="Dewasa"></div>
       </div>
-      <div class="hidden md:block font-mono text-[11px] tracking-wider text-[#8a8881]">
-        [ INITIAL_STAGE // ARCHI.v2 ]
-      </div>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative z-10 max-w-7xl mx-auto px-8 pt-20 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- LEFT COLUMN: THE BOLD HEADLINE -->
-      <div class="lg:col-span-8 flex flex-col justify-center">
-        <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#8a8881] mb-6 flex items-center gap-2">
-          <span>&#9889; COMPLIANCE &amp; CULTURE</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-[#ff3b30]"></span>
+      <!-- HEADER NAV -->
+      <header
+        class="relative z-10 max-w-7xl mx-auto px-8 py-8 flex justify-between items-baseline border-b border-[#e9e7e2]"
+      >
+        <div class="flex items-baseline gap-4">
+          <span class="font-serif italic text-2xl tracking-tight font-semibold text-[#1a1c1e]">
+            indonesia game rating system
+          </span>
+          <span class="text-[10px] font-mono tracking-widest uppercase bg-[#1a1c1e] text-[#fcfbf9] px-2 py-0.5">
+            RE-DESIGN CHALENGE
+          </span>
         </div>
-        
-        <h1 class="font-serif text-6xl md:text-8xl font-normal tracking-tight text-[#1a1c1e] leading-[0.95] mb-8">
-          Menata Ulang <br />
-          <span class="italic font-light text-[#ff3b30]">Batasan Digital</span> <br />
-          Anak Bangsa.
-        </h1>
-      </div>
-
-      <!-- RIGHT COLUMN: THE SUMMARY & ACTION -->
-      <div class="lg:col-span-4 lg:pt-16 border-t-2 border-[#1a1c1e] lg:border-t-0 lg:border-l lg:pl-8 lg:border-[#e9e7e2]">
-        <p class="text-base md:text-lg text-[#4a4842] font-normal leading-relaxed mb-8">
-          Ini adalah langkah awal dari proyek tantangan desain interaktif untuk 
-          <span class="text-[#1a1c1e] font-medium underline decoration-[#ffcc00] decoration-2 underline-offset-4"> IGRS (Kemkomdigi)</span>. 
-          Membentuk jembatan komunikasi yang aman antara ekosistem game modern dengan pengawasan kultural orang tua.
-        </p>
-
-        <div class="flex flex-col gap-3">
-          <button class="w-full py-4 bg-[#1a1c1e] text-[#fcfbf9] font-mono text-xs uppercase tracking-widest hover:bg-[#ff3b30] transition-colors duration-300 flex justify-between items-center px-6 group">
-            <span>INISIASI PROYEK</span>
-            <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
-          </button>
-          <button class="w-full py-4 bg-transparent text-[#1a1c1e] border border-[#1a1c1e] font-mono text-xs uppercase tracking-widest hover:bg-[#1a1c1e]/5 transition-colors duration-300">
-            LIHAT DOKUMENTASI ASI
-          </button>
+        <div class="hidden md:block font-mono text-[11px] tracking-wider text-[#8a8881]">
+          [ INITIAL_STAGE // ARCHI.v2 ]
         </div>
-      </div>
+      </header>
 
-    </section>
-
-    <!-- THREE-COLUMN ASYMMETRICAL FOOTPRINT -->
-    <section class="relative z-10 max-w-7xl mx-auto px-8 pb-32">
-      <div class="grid grid-cols-1 md:grid-cols-3 border-t border-b border-[#1a1c1e]">
-        
-        <!-- BRACKET 1 -->
-        <div class="p-8 border-b md:border-b-0 md:border-r border-[#e9e7e2] hover:bg-[#34c759]/5 transition-colors group">
-          <div class="font-mono text-[11px] text-[#8a8881] mb-8">01 / KLASIFIKASI ETIS</div>
-          <div class="w-12 h-12 rounded-full border border-[#1a1c1e] flex items-center justify-center font-serif text-lg mb-6 group-hover:bg-[#34c759] group-hover:text-white transition-all">
-            3+
+      <!-- HERO SECTION -->
+      <section
+        class="relative z-10 max-w-7xl mx-auto px-8 pt-20 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+      >
+        <!-- LEFT COLUMN: THE BOLD HEADLINE -->
+        <div class="lg:col-span-8 flex flex-col justify-center">
+          <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#8a8881] mb-6 flex items-center gap-2">
+            <span>&#9889; COMPLIANCE &amp; CULTURE</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#ff3b30]"></span>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3">Sistem Rating Intuitif</h3>
-          <p class="text-sm text-[#5a5852] leading-relaxed">
-            Merancang ulang simbol klasifikasi (3+, 7+, 13+, 18+, SU) agar langsung dipahami orang tua tanpa perlu membaca manual yang panjang.
+
+          <h1 class="font-serif text-6xl md:text-8xl font-normal tracking-tight text-[#1a1c1e] leading-[0.95] mb-8">
+            Menata Ulang <br />
+            <span class="italic font-light text-[#ff3b30]">Batasan Digital</span> <br />
+            Anak Bangsa.
+          </h1>
+        </div>
+
+        <!-- RIGHT COLUMN: THE SUMMARY & ACTION -->
+        <div
+          class="lg:col-span-4 lg:pt-16 border-t-2 border-[#1a1c1e] lg:border-t-0 lg:border-l lg:pl-8 lg:border-[#e9e7e2]"
+        >
+          <p class="text-base md:text-lg text-[#4a4842] font-normal leading-relaxed mb-8">
+            Ini adalah langkah awal dari proyek tantangan desain interaktif untuk
+            <span class="text-[#1a1c1e] font-medium underline decoration-[#ffcc00] decoration-2 underline-offset-4">
+              IGRS (Kemkomdigi)</span
+            >. Membentuk jembatan komunikasi yang aman antara ekosistem game modern dengan pengawasan kultural orang
+            tua.
           </p>
-        </div>
 
-        <!-- BRACKET 2 -->
-        <div class="p-8 border-b md:border-b-0 md:border-r border-[#e9e7e2] hover:bg-[#ffcc00]/5 transition-colors group">
-          <div class="font-mono text-[11px] text-[#8a8881] mb-8">02 / AKULTURASI NILAI</div>
-          <div class="w-12 h-12 rounded-full border border-[#1a1c1e] flex items-center justify-center font-serif text-lg mb-6 group-hover:bg-[#ffcc00] group-hover:text-black transition-all">
-            ID
+          <div class="flex flex-col gap-3">
+            <button
+              class="w-full py-4 bg-[#1a1c1e] text-[#fcfbf9] font-mono text-xs uppercase tracking-widest hover:bg-[#ff3b30] transition-colors duration-300 flex justify-between items-center px-6 group"
+            >
+              <span>INISIASI PROYEK</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+            <button
+              class="w-full py-4 bg-transparent text-[#1a1c1e] border border-[#1a1c1e] font-mono text-xs uppercase tracking-widest hover:bg-[#1a1c1e]/5 transition-colors duration-300"
+            >
+              LIHAT DOKUMENTASI ASI
+            </button>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3">Filter Budaya Lokal</h3>
-          <p class="text-sm text-[#5a5852] leading-relaxed">
-            Memasukkan indikator norma dan budaya Indonesia sebagai parameter penilaian utama dengan visualisasi yang tetap adaptif.
-          </p>
         </div>
+      </section>
 
-        <!-- BRACKET 3 -->
-        <div class="p-8 hover:bg-[#ff3b30]/5 transition-colors group">
-          <div class="font-mono text-[11px] text-[#8a8881] mb-8">03 / MONITORING IBU &amp; AYAH</div>
-          <div class="w-12 h-12 rounded-full border border-[#1a1c1e] flex items-center justify-center font-serif text-lg mb-6 group-hover:bg-[#ff3b30] group-hover:text-white transition-all">
-            &#128274;
+      <!-- THREE-COLUMN ASYMMETRICAL FOOTPRINT -->
+      <section class="relative z-10 max-w-7xl mx-auto px-8 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-b border-[#1a1c1e]">
+          <!-- BRACKET 1 -->
+          <div
+            class="p-8 border-b md:border-b-0 md:border-r border-[#e9e7e2] hover:bg-[#34c759]/5 transition-colors group"
+          >
+            <div class="font-mono text-[11px] text-[#8a8881] mb-8">01 / KLASIFIKASI ETIS</div>
+            <div
+              class="w-12 h-12 rounded-full border border-[#1a1c1e] flex items-center justify-center font-serif text-lg mb-6 group-hover:bg-[#34c759] group-hover:text-white transition-all"
+            >
+              3+
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-3">Sistem Rating Intuitif</h3>
+            <p class="text-sm text-[#5a5852] leading-relaxed">
+              Merancang ulang simbol klasifikasi (3+, 7+, 13+, 18+, SU) agar langsung dipahami orang tua tanpa perlu
+              membaca manual yang panjang.
+            </p>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3">Dasbor Edukasi</h3>
-          <p class="text-sm text-[#5a5852] leading-relaxed">
-            Menyediakan ruang ramah pengguna bagi keluarga untuk melacak, memahami, dan menyaring game apa saja yang boleh dimainkan anak.
-          </p>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- GAME BROWSER SECTION -->
-    <section class="relative z-10 max-w-7xl mx-auto px-8 pb-32">
-      <div class="flex items-baseline justify-between mb-10">
-        <div>
-          <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#8a8881] mb-3 flex items-center gap-2">
-            <span>04 / GAME DIRECTORY</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
+          <!-- BRACKET 2 -->
+          <div
+            class="p-8 border-b md:border-b-0 md:border-r border-[#e9e7e2] hover:bg-[#ffcc00]/5 transition-colors group"
+          >
+            <div class="font-mono text-[11px] text-[#8a8881] mb-8">02 / AKULTURASI NILAI</div>
+            <div
+              class="w-12 h-12 rounded-full border border-[#1a1c1e] flex items-center justify-center font-serif text-lg mb-6 group-hover:bg-[#ffcc00] group-hover:text-black transition-all"
+            >
+              ID
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-3">Filter Budaya Lokal</h3>
+            <p class="text-sm text-[#5a5852] leading-relaxed">
+              Memasukkan indikator norma dan budaya Indonesia sebagai parameter penilaian utama dengan visualisasi yang
+              tetap adaptif.
+            </p>
           </div>
-          <h2 class="font-serif text-4xl md:text-5xl font-normal tracking-tight text-[#1a1c1e]">
-            Jelajahi <span class="italic text-[#ff3b30]">Game</span>
-          </h2>
+
+          <!-- BRACKET 3 -->
+          <div class="p-8 hover:bg-[#ff3b30]/5 transition-colors group">
+            <div class="font-mono text-[11px] text-[#8a8881] mb-8">03 / MONITORING IBU &amp; AYAH</div>
+            <div
+              class="w-12 h-12 rounded-full border border-[#1a1c1e] flex items-center justify-center font-serif text-lg mb-6 group-hover:bg-[#ff3b30] group-hover:text-white transition-all"
+            >
+              &#128274;
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-3">Dasbor Edukasi</h3>
+            <p class="text-sm text-[#5a5852] leading-relaxed">
+              Menyediakan ruang ramah pengguna bagi keluarga untuk melacak, memahami, dan menyaring game apa saja yang
+              boleh dimainkan anak.
+            </p>
+          </div>
         </div>
-        <span id="gameCount" class="font-mono text-sm text-[#8a8881]"></span>
-      </div>
+      </section>
 
-      <!-- SEARCH & FILTERS -->
-      <div class="flex flex-col md:flex-row gap-4 mb-10">
-        <div class="relative flex-1">
-          <input
-            id="searchInput"
-            type="text"
-            placeholder="Cari nama atau kode game..."
-            class="w-full py-3 pl-10 pr-4 bg-white border border-[#e9e7e2] text-sm font-mono text-[#1a1c1e] placeholder:text-[#8a8881] focus:outline-none focus:border-[#1a1c1e] transition-colors"
-          />
-          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[#8a8881] text-sm">&#128269;</span>
+      <!-- GAME BROWSER SECTION -->
+      <section class="relative z-10 max-w-7xl mx-auto px-8 pb-32">
+        <div class="flex items-baseline justify-between mb-10">
+          <div>
+            <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#8a8881] mb-3 flex items-center gap-2">
+              <span>04 / GAME DIRECTORY</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
+            </div>
+            <h2 class="font-serif text-4xl md:text-5xl font-normal tracking-tight text-[#1a1c1e]">
+              Jelajahi <span class="italic text-[#ff3b30]">Game</span>
+            </h2>
+          </div>
+          <span id="gameCount" class="font-mono text-sm text-[#8a8881]"></span>
         </div>
-        <select id="yearFilter" class="py-3 px-4 bg-white border border-[#e9e7e2] text-sm font-mono text-[#1a1c1e] focus:outline-none focus:border-[#1a1c1e] transition-colors">
-          <option value="all">Semua Tahun</option>
-        </select>
-        <select id="sortFilter" class="py-3 px-4 bg-white border border-[#e9e7e2] text-sm font-mono text-[#1a1c1e] focus:outline-none focus:border-[#1a1c1e] transition-colors">
-          <option value="name-asc">Nama &uarr;</option>
-          <option value="name-desc">Nama &darr;</option>
-          <option value="rating-desc">Rating Tertinggi</option>
-          <option value="rating-asc">Rating Terendah</option>
-          <option value="year-desc">Tahun Terbaru</option>
-          <option value="year-asc">Tahun Tertua</option>
-        </select>
-      </div>
 
-      <!-- GAME CARDS GRID -->
-      <div id="gameGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      </div>
+        <!-- SEARCH & FILTERS -->
+        <div class="flex flex-col md:flex-row gap-4 mb-10">
+          <div class="relative flex-1">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Cari nama atau kode game..."
+              class="w-full py-3 pl-10 pr-4 bg-white border border-[#e9e7e2] text-sm font-mono text-[#1a1c1e] placeholder:text-[#8a8881] focus:outline-none focus:border-[#1a1c1e] transition-colors"
+            />
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[#8a8881] text-sm">&#128269;</span>
+          </div>
+          <select
+            id="yearFilter"
+            class="py-3 px-4 bg-white border border-[#e9e7e2] text-sm font-mono text-[#1a1c1e] focus:outline-none focus:border-[#1a1c1e] transition-colors"
+          >
+            <option value="all">Semua Tahun</option>
+          </select>
+          <select
+            id="sortFilter"
+            class="py-3 px-4 bg-white border border-[#e9e7e2] text-sm font-mono text-[#1a1c1e] focus:outline-none focus:border-[#1a1c1e] transition-colors"
+          >
+            <option value="name-asc">Nama &uarr;</option>
+            <option value="name-desc">Nama &darr;</option>
+            <option value="rating-desc">Rating Tertinggi</option>
+            <option value="rating-asc">Rating Terendah</option>
+            <option value="year-desc">Tahun Terbaru</option>
+            <option value="year-asc">Tahun Tertua</option>
+          </select>
+        </div>
 
-      <!-- EMPTY STATE -->
-      <div id="emptyState" class="hidden text-center py-20">
-        <div class="font-serif text-3xl text-[#8a8881] mb-4">:(</div>
-        <p class="font-mono text-sm text-[#8a8881]">Tidak ada game yang cocok dengan pencarianmu.</p>
-      </div>
-    </section>
+        <!-- GAME CARDS GRID -->
+        <div id="gameGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
-    <!-- METADATA FOOTER -->
-    <footer class="relative z-10 max-w-7xl mx-auto px-8 py-8 flex flex-col sm:flex-row justify-between items-center text-xs font-mono text-[#8a8881] border-t border-[#e9e7e2]">
-      <div>DEPT: KEMENTERIAN KOMUNIKASI DAN DIGITAL</div>
-      <div class="mt-2 sm:mt-0">BUILD v2.0.26 // ALL RIGHTS RESERVED</div>
-    </footer>
+        <!-- EMPTY STATE -->
+        <div id="emptyState" class="hidden text-center py-20">
+          <div class="font-serif text-3xl text-[#8a8881] mb-4">:(</div>
+          <p class="font-mono text-sm text-[#8a8881]">Tidak ada game yang cocok dengan pencarianmu.</p>
+        </div>
+      </section>
 
-  </main>
+      <!-- METADATA FOOTER -->
+      <footer
+        class="relative z-10 max-w-7xl mx-auto px-8 py-8 flex flex-col sm:flex-row justify-between items-center text-xs font-mono text-[#8a8881] border-t border-[#e9e7e2]"
+      >
+        <div>DEPT: KEMENTERIAN KOMUNIKASI DAN DIGITAL</div>
+        <div class="mt-2 sm:mt-0">BUILD v2.0.26 // ALL RIGHTS RESERVED</div>
+      </footer>
+    </main>
 
-  <script src="config.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
