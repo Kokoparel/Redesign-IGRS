@@ -1,1 +1,76 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #3b82f6;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.placeholder-section {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px dashed var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.placeholder-section:hover {
+  transform: translateY(-2px);
+}
+
+.placeholder-section h2 {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}
