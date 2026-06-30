@@ -164,7 +164,7 @@ const Beranda = () => {
                                 <p className="text-[16px] text-gray-600 font-medium mt-3 leading-[1.2] tracking-[-0.3px]" style={{ fontFamily: 'Poppins, sans-serif' }}>Klasifikasi usia berdasarkan standar konten IGRS</p>
                             </div>
                             <a href="#" className="text-[#002B6B] font-bold text-[20px] leading-[1.2] hover:underline flex items-center gap-2 pb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                                Lihat Standar Lengkap 
+                                Lihat Standar Lengkap
                                 <div style={{ width: '9.33px', height: '9.33px' }}>
                                     <img src="/src/assets/arrow.png" alt="arrow icon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
@@ -447,10 +447,10 @@ const Beranda = () => {
                             justifyContent: 'center',
                             alignItems: 'flex-start',
                         }}>
-                            <button style={{ 
+                            <button style={{
                                 position: 'relative',
-                                width: '410px', 
-                                height: '62px', 
+                                width: '410px',
+                                height: '62px',
                                 backgroundColor: '#FFFFFF',
                                 borderRadius: '32px',
                                 border: '2px solid #002B6B33',
@@ -460,7 +460,7 @@ const Beranda = () => {
                                 transition: '0.3s',
                                 boxSizing: 'border-box'
                             }}
-                            className="hover:bg-gray-50 hover:shadow-md"
+                                className="hover:bg-gray-50 hover:shadow-md"
                             >
                                 <div style={{
                                     position: 'absolute',
@@ -490,6 +490,478 @@ const Beranda = () => {
                             </button>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+
+            {/* 5. KATEGORI KONTEN SECTION */}
+            <div style={{
+                width: '100%',
+                background: 'linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)',
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
+                <div style={{
+                    width: '1280px',
+                    height: '892.5px',
+                    paddingTop: '79px',
+                    paddingRight: '100px',
+                    paddingBottom: '80px',
+                    paddingLeft: '100px',
+                    boxSizing: 'border-box'
+                }}>
+                    {/* Inner Content Container */}
+                    <div style={{
+                        width: '1080px',
+                        height: '733.5px',
+                        maxWidth: '1280px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        margin: '0 auto'
+                    }}>
+                        {/* Header Judul */}
+                        <div style={{
+                            width: '1080px',
+                            height: '113px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '16px'
+                        }}>
+                            {/* Heading */}
+                            <div style={{ width: '1080px', height: '59px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <h2 style={{
+                                    margin: 0,
+                                    width: '387px',
+                                    height: '59px',
+                                    fontFamily: 'Inter, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '49px',
+                                    lineHeight: '120%',
+                                    color: '#000000',
+                                    textAlign: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    whiteSpace: 'nowrap'
+                                }}>
+                                    Kategori Konten
+                                </h2>
+                            </div>
+
+                            {/* Subheading */}
+                            <div style={{ width: '672px', height: '38px', maxWidth: '672px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <p style={{
+                                    margin: 0,
+                                    width: '675px',
+                                    height: '38px',
+                                    fontFamily: 'Poppins, sans-serif',
+                                    fontWeight: 500,
+                                    fontSize: '16px',
+                                    lineHeight: '120%',
+                                    color: '#404040',
+                                    textAlign: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    Kami mengevaluasi berbagai aspek konten untuk memastikan kesesuaian dengan kelompok usia target.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Card Grid Container */}
+                        <div style={{
+                            width: '1080px',
+                            height: '604.5px',
+                            marginTop: '16px',
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(4, 1fr)',
+                            rowGap: '32px',
+                            columnGap: '32px'
+                        }}>
+                            {/* Card 1: Kekerasan */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #BA1A1A1A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #BA1A1A0D, 0px 10px 1px -5px #BA1A1A'
+                            }}>
+                                {/* Icon Overlay Container */}
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#FF8B8B4D',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    boxShadow: '0px 0px 0px 4px #BA1A1A0D'
+                                }}>
+                                    <img src="/src/assets/icons/IconKekerasan.png" alt="Kekerasan" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
+                                </div>
+
+                                {/* Heading */}
+                                <div style={{ width: '180px', height: '48px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{
+                                        margin: 0,
+                                        width: '180px',
+                                        height: '48px',
+                                        fontFamily: 'Inter, sans-serif',
+                                        fontWeight: 700,
+                                        fontSize: '20px',
+                                        lineHeight: '120%',
+                                        color: '#000000',
+                                        textAlign: 'center',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center'
+                                    }}>
+                                        Kekerasan <br /> (Violence)
+                                    </h3>
+                                </div>
+
+                                {/* Description */}
+                                <div style={{ width: '180px', height: '64px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{
+                                        margin: 0,
+                                        width: '180px',
+                                        height: '64px',
+                                        fontFamily: 'Poppins, sans-serif',
+                                        fontWeight: 300,
+                                        fontSize: '13px',
+                                        lineHeight: '120%',
+                                        color: '#404040',
+                                        textAlign: 'left'
+                                    }}>
+                                        Penggambaran aksi kekerasan fisik, penggunaan senjata, dan dampak visualnya.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 2: Ketakutan */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #002B6B1A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #002B6B0D, 0px 10px 1px -5px #002B6B'
+                            }}>
+                                {/* Icon Overlay Container */}
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#7FAEF24D',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    boxShadow: '0px 0px 0px 4px #002B6B0D'
+                                }}>
+                                    <img src="/src/assets/icons/IconKetakutan.png" alt="Ketakutan" style={{ width: '62px', height: '62px', objectFit: 'contain' }} />
+                                </div>
+
+                                {/* Heading */}
+                                <div style={{ width: '180px', height: '48px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{
+                                        margin: 0,
+                                        width: '180px',
+                                        height: '48px',
+                                        fontFamily: 'Inter, sans-serif',
+                                        fontWeight: 700,
+                                        fontSize: '20px',
+                                        lineHeight: '120%',
+                                        color: '#000000',
+                                        textAlign: 'center',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center'
+                                    }}>
+                                        Ketakutan <br /> (Fear)
+                                    </h3>
+                                </div>
+
+                                {/* Description */}
+                                <div style={{ width: '180px', height: '64px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{
+                                        margin: 0,
+                                        width: '180px',
+                                        height: '64px',
+                                        fontFamily: 'Poppins, sans-serif',
+                                        fontWeight: 300,
+                                        fontSize: '13px',
+                                        lineHeight: '120%',
+                                        color: '#404040',
+                                        textAlign: 'left'
+                                    }}>
+                                        Elemen horor, kejutan, atau suasana yang dapat memicu rasa takut berlebih.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 3: Interaksi Online */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #0056D21A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #60A5FA0D, 0px 10px 1px -5px #60A5FA'
+                            }}>
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#85D98F4D',
+                                    position: 'relative',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    {/* Inner Overlay + Shadow */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        borderRadius: '24px',
+                                        backgroundColor: '#7FAEF24D',
+                                        boxShadow: '0px 0px 0px 4px #EFF6FF',
+                                        pointerEvents: 'none'
+                                    }}></div>
+                                    <img src="/src/assets/icons/IconInteraksi.png" alt="Interaksi Online" style={{ width: '50px', height: '50px', objectFit: 'contain', zIndex: 1 }} />
+                                </div>
+                                <div style={{ width: '180px', height: '48px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        Interaksi <br /> Online
+                                    </h3>
+                                </div>
+                                <div style={{ width: '180px', height: '48px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{ margin: 0, width: '180px', height: '64px', fontFamily: 'Poppins, sans-serif', fontWeight: 300, fontSize: '13px', lineHeight: '120%', color: '#404040', textAlign: 'left' }}>
+                                        Fitur chat, komunitas, dan interaksi antar pemain secara real-time.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 4: Simulasi Perjudian */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #16A34A1A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #006E1C0D, 0px 10px 1px -5px #006E1C'
+                            }}>
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#006E1C1A',
+                                    position: 'relative',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    {/* Inner Overlay + Shadow */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        borderRadius: '24px',
+                                        backgroundColor: '#85D98F4D',
+                                        boxShadow: '0px 0px 0px 4px #006E1C0D',
+                                        pointerEvents: 'none'
+                                    }}></div>
+                                    <img src="/src/assets/icons/IconPerjudian.png" alt="Simulasi Perjudian" style={{ width: '63.651573181152344px', height: '63.902652740478516px', objectFit: 'contain', zIndex: 1 }} />
+                                </div>
+                                <div style={{ width: '180px', height: '48px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        Simulasi <br /> Perjudian
+                                    </h3>
+                                </div>
+                                <div style={{ width: '180px', height: '48px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{ margin: 0, width: '180px', height: '64px', fontFamily: 'Poppins, sans-serif', fontWeight: 300, fontSize: '13px', lineHeight: '120%', color: '#404040', textAlign: 'left' }}>
+                                        Fitur yang menyerupai mekanisme judi atau taruhan dalam permainan.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 5: Obat-obatan */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #22C55E1A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #4ADE800D, 0px 10px 1px -5px #4ADE80'
+                            }}>
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#DCFCE7',
+                                    position: 'relative',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    {/* Inner Overlay + Shadow */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        borderRadius: '24px',
+                                        backgroundColor: '#BED9854D',
+                                        boxShadow: '0px 0px 0px 4px #F0FDF4',
+                                        pointerEvents: 'none'
+                                    }}></div>
+                                    <img src="/src/assets/icons/IconObatObatan.png" alt="Obat-obatan" style={{ width: '54.89283752441406px', height: '60.719573974609375px', objectFit: 'contain', zIndex: 1 }} />
+                                </div>
+                                <div style={{ width: '180px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        Obat-obatan
+                                    </h3>
+                                </div>
+                                <div style={{ width: '180px', height: '64px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{ margin: 0, width: '180px', height: '64px', fontFamily: 'Poppins, sans-serif', fontWeight: 300, fontSize: '13px', lineHeight: '120%', color: '#404040', textAlign: 'left' }}>
+                                        Referensi atau penggunaan zat terlarang dalam narasi atau mekanik gim.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 6: Konten Seksual */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #EF44441A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #BA1A1A0D, 0px 10px 1px -5px #BA1A1A'
+                            }}>
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#FF8B8B4D',
+                                    position: 'relative',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    {/* Inner Overlay + Shadow */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        borderRadius: '24px',
+                                        backgroundColor: '#FFFFFF01',
+                                        boxShadow: '0px 0px 0px 4px #BA1A1A0D',
+                                        pointerEvents: 'none'
+                                    }}></div>
+                                    <img src="/src/assets/icons/IconKontenSeksual.png" alt="Konten Seksual" style={{ width: '40px', height: '43px', objectFit: 'contain', zIndex: 1 }} />
+                                </div>
+                                <div style={{ width: '180px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        Konten Seksual
+                                    </h3>
+                                </div>
+                                <div style={{ width: '180px', height: '48px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{ margin: 0, width: '180px', height: '64px', fontFamily: 'Poppins, sans-serif', fontWeight: 300, fontSize: '13px', lineHeight: '120%', color: '#404040', textAlign: 'left' }}>
+                                        Visual, dialog, atau tema yang berkaitan dengan konten dewasa.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Card 7: Bahasa Kasar */}
+                            <div style={{
+                                position: 'relative',
+                                width: '246px',
+                                height: '277.25px',
+                                borderRadius: '40px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid #9CA3AF1A',
+                                padding: '32px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '10.8px',
+                                boxSizing: 'border-box',
+                                boxShadow: '0px 8px 10px -6px #CBD5E10D, 0px 10px 1px -5px #CBD5E1'
+                            }}>
+                                <div style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    borderRadius: '24px',
+                                    backgroundColor: '#F1F5F9',
+                                    position: 'relative',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    {/* Inner Overlay + Shadow */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        borderRadius: '24px',
+                                        backgroundColor: '#FFFFFF01',
+                                        boxShadow: '0px 0px 0px 4px #F8FAFC',
+                                        pointerEvents: 'none'
+                                    }}></div>
+                                    <img src="/src/assets/icons/IconBahasaKasar.png" alt="Bahasa Kasar" style={{ width: '30px', height: '25.5px', objectFit: 'contain', zIndex: 1 }} />
+                                </div>
+                                <div style={{ width: '180px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                    <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                        Bahasa Kasar
+                                    </h3>
+                                </div>
+                                <div style={{ width: '180px', height: '64px', display: 'flex', alignItems: 'flex-start' }}>
+                                    <p style={{ margin: 0, width: '180px', height: '64px', fontFamily: 'Poppins, sans-serif', fontWeight: 300, fontSize: '13px', lineHeight: '120%', color: '#404040', textAlign: 'left' }}>
+                                        Penggunaan kata-kata yang tidak pantas, umpatan, atau bahasa vulgar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
