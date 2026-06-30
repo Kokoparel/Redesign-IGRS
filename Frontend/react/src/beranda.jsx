@@ -1,10 +1,5 @@
 import React from 'react';
-import logoIgrs from './assets/icons/logo-igrs.png';
-import icon3 from './assets/icons/3tahunkeatas.png';
-import icon7 from './assets/icons/7tahunkeatas.png';
-import icon13 from './assets/icons/13tahunkeatas.png';
-import icon15 from './assets/icons/15tahunkeatas.png';
-import icon18 from './assets/icons/18tahunkeatas.png';
+
 
 const Beranda = () => {
     return (
@@ -68,7 +63,7 @@ const Beranda = () => {
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
                     <div className="flex items-center gap-8">
                         {/* Logo */}
-                        <img src={logoIgrs} alt="IGRS Logo" className="h-10" />
+                        <img src="/assets/icons/logo-igrs.png" alt="IGRS Logo" className="h-10" />
 
                         {/* Nav Links */}
                         <ul
@@ -175,7 +170,7 @@ const Beranda = () => {
                         <div style={{ width: '1080px', height: '285px', gap: '15px', display: 'flex', flexWrap: 'nowrap', justifyContent: 'space-between' }}>
                             {/* 3+ */}
                             <div className="w-[204px] h-[285px] bg-[#EEF8F1] rounded-[40px] border border-[#BDE4C6] p-8 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition shrink-0">
-                                <img src={icon3} alt="3+" className="h-[75px] object-contain drop-shadow-sm" />
+                                <img src="/assets/icons/3tahunkeatas.png" alt="3+" className="h-[75px] object-contain drop-shadow-sm" />
                                 <div className="text-center mt-2">
                                     <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '25px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#1E8235' }}>3,794</p>
                                     <p style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, fontSize: '13px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#555555' }}>jumlah pemain</p>
@@ -187,7 +182,7 @@ const Beranda = () => {
 
                             {/* 7+ */}
                             <div className="w-[204px] h-[285px] bg-[#EEF8F1] rounded-[40px] border border-[#BDE4C6] p-8 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition shrink-0">
-                                <img src={icon7} alt="7+" className="h-[75px] object-contain drop-shadow-sm" />
+                                <img src="/assets/icons/7tahunkeatas.png" alt="7+" className="h-[75px] object-contain drop-shadow-sm" />
                                 <div className="text-center mt-2">
                                     <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '25px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#1E8235' }}>5,224</p>
                                     <p style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, fontSize: '13px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#555555' }}>jumlah pemain</p>
@@ -199,7 +194,7 @@ const Beranda = () => {
 
                             {/* 13+ */}
                             <div className="w-[204px] h-[285px] bg-[#EAF2FE] rounded-[40px] border border-[#A6C8FF] p-8 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition shrink-0">
-                                <img src={icon13} alt="13+" className="h-[75px] object-contain drop-shadow-sm" />
+                                <img src="/assets/icons/13tahunkeatas.png" alt="13+" className="h-[75px] object-contain drop-shadow-sm" />
                                 <div className="text-center mt-2">
                                     <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '25px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#165BC5' }}>2,591</p>
                                     <p style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, fontSize: '13px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#555555' }}>jumlah pemain</p>
@@ -211,7 +206,7 @@ const Beranda = () => {
 
                             {/* 15+ */}
                             <div className="w-[204px] h-[285px] bg-[#EAF2FE] rounded-[40px] border border-[#A6C8FF] p-8 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition shrink-0">
-                                <img src={icon15} alt="15+" className="h-[75px] object-contain drop-shadow-sm" />
+                                <img src="/assets/icons/15tahunkeatas.png" alt="15+" className="h-[75px] object-contain drop-shadow-sm" />
                                 <div className="text-center mt-2">
                                     <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '25px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#165BC5' }}>3,118</p>
                                     <p style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, fontSize: '13px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#555555' }}>jumlah pemain</p>
@@ -223,7 +218,7 @@ const Beranda = () => {
 
                             {/* 18+ */}
                             <div className="w-[204px] h-[285px] bg-[#FCEAE8] rounded-[40px] border border-[#F6B8B8] p-8 flex flex-col items-center justify-between shadow-sm hover:shadow-md transition shrink-0">
-                                <img src={icon18} alt="18+" className="h-[75px] object-contain drop-shadow-sm" />
+                                <img src="/assets/icons/18tahunkeatas.png" alt="18+" className="h-[75px] object-contain drop-shadow-sm" />
                                 <div className="text-center mt-2">
                                     <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '25px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#D12B2B' }}>298</p>
                                     <p style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 500, fontSize: '13px', lineHeight: '120%', letterSpacing: '0%', textAlign: 'center', color: '#555555' }}>jumlah pemain</p>
