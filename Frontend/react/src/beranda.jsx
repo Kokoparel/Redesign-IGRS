@@ -166,7 +166,7 @@ const Beranda = () => {
                             <a href="#" className="text-[#002B6B] font-bold text-[20px] leading-[1.2] hover:underline flex items-center gap-2 pb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
                                 Lihat Standar Lengkap
                                 <div style={{ width: '9.33px', height: '9.33px' }}>
-                                    <img src="/src/assets/arrow.png" alt="arrow icon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                    <img src="/assets/arrow.png" alt="arrow icon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                             </a>
                         </div>
@@ -245,7 +245,7 @@ const Beranda = () => {
                 {/* Wrapper bg #A9CBFB: gap di bawah image tampil biru, bukan putih */}
                 <div style={{ width: '100%', lineHeight: 0, backgroundColor: '#A9CBFB' }}>
                     <img
-                        src="/src/assets/ombak2.png"
+                        src="/assets/ombak2.png"
                         alt="wave divider"
                         style={{ width: '100%', height: '123.5px', objectFit: 'fill', display: 'block' }}
                     />
@@ -485,7 +485,7 @@ const Beranda = () => {
                                     width: '16px',
                                     height: '16px'
                                 }}>
-                                    <img src="/src/assets/arrow.png" alt="arrow icon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                    <img src="/assets/arrow.png" alt="arrow icon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                             </button>
                         </div>
@@ -608,7 +608,7 @@ const Beranda = () => {
                                     alignItems: 'center',
                                     boxShadow: '0px 0px 0px 4px #BA1A1A0D'
                                 }}>
-                                    <img src="/src/assets/icons/IconKekerasan.png" alt="Kekerasan" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
+                                    <img src="/assets/icons/IconKekerasan.png" alt="Kekerasan" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
                                 </div>
 
                                 {/* Heading */}
@@ -676,7 +676,7 @@ const Beranda = () => {
                                     alignItems: 'center',
                                     boxShadow: '0px 0px 0px 4px #002B6B0D'
                                 }}>
-                                    <img src="/src/assets/icons/IconKetakutan.png" alt="Ketakutan" style={{ width: '62px', height: '62px', objectFit: 'contain' }} />
+                                    <img src="/assets/icons/IconKetakutan.png" alt="Ketakutan" style={{ width: '62px', height: '62px', objectFit: 'contain' }} />
                                 </div>
 
                                 {/* Heading */}
@@ -752,7 +752,7 @@ const Beranda = () => {
                                         boxShadow: '0px 0px 0px 4px #EFF6FF',
                                         pointerEvents: 'none'
                                     }}></div>
-                                    <img src="/src/assets/icons/IconInteraksi.png" alt="Interaksi Online" style={{ width: '50px', height: '50px', objectFit: 'contain', zIndex: 1 }} />
+                                    <img src="/assets/icons/IconInteraksi.png" alt="Interaksi Online" style={{ width: '50px', height: '50px', objectFit: 'contain', zIndex: 1 }} />
                                 </div>
                                 <div style={{ width: '180px', height: '48px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -801,7 +801,7 @@ const Beranda = () => {
                                         boxShadow: '0px 0px 0px 4px #006E1C0D',
                                         pointerEvents: 'none'
                                     }}></div>
-                                    <img src="/src/assets/icons/IconPerjudian.png" alt="Simulasi Perjudian" style={{ width: '63.651573181152344px', height: '63.902652740478516px', objectFit: 'contain', zIndex: 1 }} />
+                                    <img src="/assets/icons/IconPerjudian.png" alt="Simulasi Perjudian" style={{ width: '63.651573181152344px', height: '63.902652740478516px', objectFit: 'contain', zIndex: 1 }} />
                                 </div>
                                 <div style={{ width: '180px', height: '48px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -850,7 +850,7 @@ const Beranda = () => {
                                         boxShadow: '0px 0px 0px 4px #F0FDF4',
                                         pointerEvents: 'none'
                                     }}></div>
-                                    <img src="/src/assets/icons/IconObatObatan.png" alt="Obat-obatan" style={{ width: '54.89283752441406px', height: '60.719573974609375px', objectFit: 'contain', zIndex: 1 }} />
+                                    <img src="/assets/icons/IconObatObatan.png" alt="Obat-obatan" style={{ width: '54.89283752441406px', height: '60.719573974609375px', objectFit: 'contain', zIndex: 1 }} />
                                 </div>
                                 <div style={{ width: '180px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -899,7 +899,7 @@ const Beranda = () => {
                                         boxShadow: '0px 0px 0px 4px #BA1A1A0D',
                                         pointerEvents: 'none'
                                     }}></div>
-                                    <img src="/src/assets/icons/IconKontenSeksual.png" alt="Konten Seksual" style={{ width: '40px', height: '43px', objectFit: 'contain', zIndex: 1 }} />
+                                    <img src="/assets/icons/IconKontenSeksual.png" alt="Konten Seksual" style={{ width: '40px', height: '43px', objectFit: 'contain', zIndex: 1 }} />
                                 </div>
                                 <div style={{ width: '180px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -948,7 +948,7 @@ const Beranda = () => {
                                         boxShadow: '0px 0px 0px 4px #F8FAFC',
                                         pointerEvents: 'none'
                                     }}></div>
-                                    <img src="/src/assets/icons/IconBahasaKasar.png" alt="Bahasa Kasar" style={{ width: '30px', height: '25.5px', objectFit: 'contain', zIndex: 1 }} />
+                                    <img src="/assets/icons/IconBahasaKasar.png" alt="Bahasa Kasar" style={{ width: '30px', height: '25.5px', objectFit: 'contain', zIndex: 1 }} />
                                 </div>
                                 <div style={{ width: '180px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                     <h3 style={{ margin: 0, width: '180px', height: '48px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#000000', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
