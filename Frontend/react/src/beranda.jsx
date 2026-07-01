@@ -1,7 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
+const API_BASE = '/api';
 
 const Beranda = () => {
+    // State untuk data games dari API
+    const [games, setGames] = useState([]);
+    const [activeFilter, setActiveFilter] = useState('Semua');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Fetch games dari backend API
+    const fetchGames = async (rating = null) => {
+        setIsLoading(true);
+        try {
+            let url = `${API_BASE}/games?limit=4`;
+            if (rating && rating !== 'Semua') {
+                url += `&rating=${encodeURIComponent(rating)}`;
+            }
+            const res = await fetch(url);
+            const json = await res.json();
+            if (json.success) {
+                setGames(json.data);
+            }
+        } catch (err) {
+            console.error('Gagal mengambil data games:', err);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Search games
+    const handleSearch = async () => {
+        if (!searchQuery.trim()) {
+            fetchGames(activeFilter);
+            return;
+        }
+        setIsLoading(true);
+        try {
+            const res = await fetch(`${API_BASE}/games/search?q=${encodeURIComponent(searchQuery.trim())}&limit=4`);
+            const json = await res.json();
+            if (json.success) {
+                setGames(json.data);
+            }
+        } catch (err) {
+            console.error('Gagal mencari games:', err);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Handle filter click
+    const handleFilterClick = (filter) => {
+        setActiveFilter(filter);
+        setSearchQuery('');
+        fetchGames(filter);
+    };
+
+    // Helper: warna badge rating
+    const getRatingBadgeStyle = (rating) => {
+        if (rating === '7+' || rating === '3+') {
+            return { backgroundColor: '#85D98F', color: '#006E1C' };
+        } else if (rating === '13+' || rating === '15+') {
+            return { backgroundColor: '#7FAEF2', color: '#134F9C' };
+        } else if (rating === '18+' || rating === 'RC') {
+            return { backgroundColor: '#FF8B8B', color: '#ED261C' };
+        }
+        return { backgroundColor: '#85D98F', color: '#006E1C' };
+    };
+
+    // Fetch games saat pertama kali load
+    useEffect(() => {
+        fetchGames();
+    }, []);
+
+    const filterOptions = ['Semua', '3+', '7+', '13+', '15+', '18+'];
+
+
     return (
         <div className="min-h-screen bg-white font-sans text-gray-800 relative overflow-hidden">
             {/* Background Blur Elements (Berdasarkan Figma) */}
@@ -124,6 +198,9 @@ const Beranda = () => {
                             type="text"
                             placeholder="Masukkan Pencarian..."
                             className="w-full bg-transparent px-4 py-3 pl-12 focus:outline-none text-gray-700 font-medium h-full rounded-full"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                         />
                     </div>
                     <button className="bg-white h-[56px] w-[56px] rounded-[16px] shadow-[0_4px_10px_rgba(0,0,0,0.25)] border border-gray-100 flex items-center justify-center hover:bg-gray-50 transition shrink-0">
@@ -133,7 +210,7 @@ const Beranda = () => {
 
                 {/* Buttons */}
                 <div className="flex justify-center gap-5">
-                    <button className="bg-[#174F9B] text-white px-10 py-4 rounded-[12px] font-bold text-[15px] shadow-[0_12px_24px_-8px_rgba(23,79,155,0.6)] hover:bg-[#113e7c] transition">
+                    <button className="bg-[#174F9B] text-white px-10 py-4 rounded-[12px] font-bold text-[15px] shadow-[0_12px_24px_-8px_rgba(23,79,155,0.6)] hover:bg-[#113e7c] transition" onClick={handleSearch}>
                         Cari Game
                     </button>
                     <button className="bg-[#00701F] text-white px-10 py-4 rounded-[12px] font-bold text-[15px] shadow-[0_12px_24px_-8px_rgba(0,112,31,0.6)] hover:bg-[#005a18] transition">
@@ -308,37 +385,15 @@ const Beranda = () => {
                                 alignItems: 'center',
                                 justifyContent: 'center'
                             }}>
-                                {/* Active Button */}
-                                <button style={{
-                                    width: '102px',
-                                    height: '46px',
-                                    padding: '11px 24px',
-                                    borderRadius: '9999px',
-                                    backgroundColor: '#134F9C',
-                                    color: '#FAF8FF', // Teks warna putih agar terbaca di bg biru
-                                    border: 'none',
-                                    fontFamily: 'Inter, sans-serif',
-                                    fontWeight: 700,
-                                    fontSize: '16px',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    cursor: 'pointer',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    Semua
-                                </button>
-
-                                {/* Inactive Buttons */}
-                                {['3+', '7+', '13+', '15+', '18+'].map((age) => (
-                                    <button key={age} style={{
-                                        width: '72px',
-                                        height: '41px',
-                                        padding: '10px 24px',
+                                {filterOptions.map((filter) => (
+                                    <button key={filter} onClick={() => handleFilterClick(filter)} style={{
+                                        width: filter === 'Semua' ? '102px' : '72px',
+                                        height: activeFilter === filter ? '46px' : '41px',
+                                        padding: activeFilter === filter ? '11px 24px' : '10px 24px',
                                         borderRadius: '9999px',
-                                        backgroundColor: '#FFFFFF', // Asumsi warna background putih
-                                        border: '1px solid #C4C6D2',
-                                        color: '#404040', // Warna teks umur sesuai spec
+                                        backgroundColor: activeFilter === filter ? '#134F9C' : '#FFFFFF',
+                                        color: activeFilter === filter ? '#FAF8FF' : '#404040',
+                                        border: activeFilter === filter ? 'none' : '1px solid #C4C6D2',
                                         fontFamily: 'Inter, sans-serif',
                                         fontWeight: 700,
                                         fontSize: '16px',
@@ -349,7 +404,7 @@ const Beranda = () => {
                                         cursor: 'pointer',
                                         boxSizing: 'border-box'
                                     }}>
-                                        {age}
+                                        {filter}
                                     </button>
                                 ))}
                             </div>
@@ -358,79 +413,39 @@ const Beranda = () => {
                         {/* Cards container: 1080 x 331.19px, flex row, gap 24px */}
                         <div style={{
                             width: '100%',
-                            height: '331.19px',
+                            minHeight: '331.19px',
                             display: 'flex',
                             flexDirection: 'row',
                             justifyContent: 'center',
                             gap: '24px',
                         }}>
-                            {/* Game 1 (3+) */}
-                            <div className="relative overflow-hidden group cursor-pointer bg-black" style={{ width: '220.8px', height: '331.19px', borderRadius: '24px', flexShrink: 0 }}>
-                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Legend of..." className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                                <div className="absolute top-4 right-4" style={{
-                                    width: '42px', height: '24px', padding: '4px 12px', borderRadius: '12px',
-                                    backgroundColor: '#85D98F', color: '#006E1C',
-                                    fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '13px', lineHeight: '120%',
-                                    display: 'flex', justifyContent: 'center', alignItems: 'center', boxSizing: 'border-box',
-                                    boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A, 0px 0px 0px 2px #FFFFFF33'
-                                }}>3+</div>
-                                <div className="absolute bottom-6 left-6" style={{ width: '172.8px', height: '36px', display: 'flex', flexDirection: 'column' }}>
-                                    <h3 style={{ margin: 0, padding: 0, width: '172.8px', height: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>Legend of...</h3>
-                                    <p style={{ margin: 0, padding: 0, width: '172.8px', height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>ADVENTURE • ACTION</p>
+                            {isLoading ? (
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '331.19px' }}>
+                                    <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: '18px', color: '#FFFFFF' }}>Memuat data...</p>
                                 </div>
-                            </div>
-
-                            {/* Game 2 (7+) */}
-                            <div className="relative overflow-hidden group cursor-pointer bg-black" style={{ width: '220.8px', height: '331.19px', borderRadius: '24px', flexShrink: 0 }}>
-                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pixel World..." className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                                <div className="absolute top-4 right-4" style={{
-                                    width: '42px', height: '24px', padding: '4px 12px', borderRadius: '12px',
-                                    backgroundColor: '#85D98F', color: '#006E1C',
-                                    fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '13px', lineHeight: '120%',
-                                    display: 'flex', justifyContent: 'center', alignItems: 'center', boxSizing: 'border-box',
-                                    boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A, 0px 0px 0px 2px #FFFFFF33'
-                                }}>7+</div>
-                                <div className="absolute bottom-6 left-6" style={{ width: '172.8px', height: '36px', display: 'flex', flexDirection: 'column' }}>
-                                    <h3 style={{ margin: 0, padding: 0, width: '172.8px', height: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>Pixel World...</h3>
-                                    <p style={{ margin: 0, padding: 0, width: '172.8px', height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>SANDBOX • CREATIVE</p>
+                            ) : games.length === 0 ? (
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '331.19px' }}>
+                                    <p style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600, fontSize: '18px', color: '#FFFFFF' }}>Tidak ada game ditemukan</p>
                                 </div>
-                            </div>
-
-                            {/* Game 3 (13+) */}
-                            <div className="relative overflow-hidden group cursor-pointer bg-black" style={{ width: '220.8px', height: '331.19px', borderRadius: '24px', flexShrink: 0 }}>
-                                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sector 7 Strike" className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                                <div className="absolute top-4 right-4" style={{
-                                    width: '42px', height: '24px', padding: '4px 12px', borderRadius: '12px',
-                                    backgroundColor: '#7FAEF2', color: '#134F9C',
-                                    fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '13px', lineHeight: '120%',
-                                    display: 'flex', justifyContent: 'center', alignItems: 'center', boxSizing: 'border-box',
-                                    boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A, 0px 0px 0px 2px #FFFFFF33'
-                                }}>13+</div>
-                                <div className="absolute bottom-6 left-6" style={{ width: '172.8px', height: '36px', display: 'flex', flexDirection: 'column' }}>
-                                    <h3 style={{ margin: 0, padding: 0, width: '172.8px', height: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>Sector 7 Strike</h3>
-                                    <p style={{ margin: 0, padding: 0, width: '172.8px', height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>SHOOTER • TACTICAL</p>
-                                </div>
-                            </div>
-
-                            {/* Game 4 (15+) */}
-                            <div className="relative overflow-hidden group cursor-pointer bg-black" style={{ width: '220.8px', height: '331.19px', borderRadius: '24px', flexShrink: 0 }}>
-                                <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Highway Heat" className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-500" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                                <div className="absolute top-4 right-4" style={{
-                                    width: '42px', height: '24px', padding: '4px 12px', borderRadius: '12px',
-                                    backgroundColor: '#FF8B8B', color: '#ED261C',
-                                    fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '13px', lineHeight: '120%',
-                                    display: 'flex', justifyContent: 'center', alignItems: 'center', boxSizing: 'border-box',
-                                    boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A, 0px 0px 0px 2px #FFFFFF33'
-                                }}>15+</div>
-                                <div className="absolute bottom-6 left-6" style={{ width: '172.8px', height: '36px', display: 'flex', flexDirection: 'column' }}>
-                                    <h3 style={{ margin: 0, padding: 0, width: '172.8px', height: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>Highway Heat</h3>
-                                    <p style={{ margin: 0, padding: 0, width: '172.8px', height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>RACING • SPORTS</p>
-                                </div>
-                            </div>
+                            ) : (
+                                games.map((game) => (
+                                    <div key={game.id} className="relative overflow-hidden group cursor-pointer bg-black" style={{ width: '220.8px', height: '331.19px', borderRadius: '24px', flexShrink: 0 }}>
+                                        <img src={game.image_url || 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'} alt={game.title} className="w-full h-full object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                                        <div className="absolute top-4 right-4" style={{
+                                            width: '42px', height: '24px', padding: '4px 12px', borderRadius: '12px',
+                                            ...getRatingBadgeStyle(game.rating),
+                                            fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '13px', lineHeight: '120%',
+                                            display: 'flex', justifyContent: 'center', alignItems: 'center', boxSizing: 'border-box',
+                                            boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A, 0px 0px 0px 2px #FFFFFF33'
+                                        }}>{game.rating}</div>
+                                        <div className="absolute bottom-6 left-6" style={{ width: '172.8px', height: '36px', display: 'flex', flexDirection: 'column' }}>
+                                            <h3 style={{ margin: 0, padding: 0, width: '172.8px', height: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '20px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>{game.title}</h3>
+                                            <p style={{ margin: 0, padding: 0, width: '172.8px', height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#FAF8FF', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', display: 'flex', alignItems: 'center' }}>{game.genre ? game.genre.toUpperCase() : ''} {game.platform ? '• ' + game.platform.toUpperCase() : ''}</p>
+                                        </div>
+                                    </div>
+                                ))
+                            )}
                         </div>
 
                         {/* Button container: 1080 x 78px, padding-top 16px, center */}
