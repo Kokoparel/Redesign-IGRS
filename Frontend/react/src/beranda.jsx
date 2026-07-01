@@ -21,8 +21,7 @@ const Beranda = () => {
                     style={{
                         width: '384px',
                         height: '384px',
-                        backgroundColor: '#7faef2ff',
-                        opacity: 0.35,
+                        backgroundColor: '#7FAEF24D',
                         filter: 'blur(64px)',
                         top: '8%',
                         left: '-11%',
@@ -36,7 +35,6 @@ const Beranda = () => {
                         width: '384px',
                         height: '384px',
                         backgroundColor: '#85D98F4D',
-                        opacity: 1,
                         filter: 'blur(64px)',
                         top: '28%',
                         right: '-10%',
@@ -49,8 +47,7 @@ const Beranda = () => {
                     style={{
                         width: '384px',
                         height: '384px',
-                        backgroundColor: '#ff8b8b',
-                        opacity: 0.40,
+                        backgroundColor: '#FF8B8B4D',
                         filter: 'blur(64px)',
                         top: '70%',
                         left: '35%',
@@ -961,6 +958,858 @@ const Beranda = () => {
                 </div>
             </div>
 
+            {/* 6. BERITA & PENGUMUMAN SECTION */}
+            <div style={{
+                width: '100%',
+                backgroundColor: '#FFFFFF',
+                display: 'flex',
+                justifyContent: 'center'
+            }}>
+                <div style={{
+                    width: '1280px',
+                    paddingRight: '100px',
+                    paddingBottom: '80px',
+                    paddingLeft: '100px',
+                    boxSizing: 'border-box'
+                }}>
+                    {/* Inner Content Container */}
+                    <div style={{
+                        width: '1080px',
+                        maxWidth: '1280px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '64px'
+                    }}>
+                        {/* Header Row */}
+                        <div style={{
+                            width: '1080px',
+                            height: '69px',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center'
+                        }}>
+                            {/* Title Container */}
+                            <div style={{
+                                width: '583px',
+                                height: '69px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '10px',
+                                borderLeft: '8px solid #134F9C',
+                                paddingLeft: '29px',
+                                boxSizing: 'border-box'
+                            }}>
+                                <h2 style={{
+                                    margin: 0,
+                                    width: '530px',
+                                    height: '59px',
+                                    fontFamily: 'Inter, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '49px',
+                                    lineHeight: '120%',
+                                    color: '#134F9C',
+                                    display: 'flex',
+                                    alignItems: 'center'
+                                }}>
+                                    Berita & Pengumuman
+                                </h2>
+                            </div>
+
+                            {/* "Lihat Semua Berita" Link */}
+                            <a href="#" style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                width: '201.33px',
+                                height: '24px',
+                                textDecoration: 'none',
+                                cursor: 'pointer'
+                            }} className="hover:underline">
+                                <span style={{
+                                    width: '184px',
+                                    height: '24px',
+                                    fontFamily: 'Inter, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '20px',
+                                    lineHeight: '120%',
+                                    textAlign: 'center',
+                                    color: '#134F9C',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}>
+                                    Lihat Semua Berita
+                                </span>
+                                <div style={{ width: '9.33px', height: '9.33px' }}>
+                                    <img src="/assets/arrow.png" alt="arrow icon" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                </div>
+                            </a>
+                        </div>
+                        {/* Berita Cards Container */}
+                        <div style={{
+                            width: '1080px',
+                            height: '702.23px',
+                            display: 'flex',
+                            justifyContent: 'space-between'
+                        }}>
+                            {/* Kiri: Berita Utama */}
+                            <div style={{
+                                width: '678px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '32px'
+                            }}>
+                                {/* Image Container */}
+                                <div style={{
+                                    width: '678px',
+                                    height: '442.48px',
+                                    borderRadius: '48px',
+                                    position: 'relative',
+                                    backgroundColor: '#FFFFFF01',
+                                    boxShadow: '0px 25px 50px -12px #002B6B1A',
+                                    overflow: 'hidden'
+                                }}>
+                                    {/* Foto Berita (Dummy) */}
+                                    <img
+                                        src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+                                        alt="Berita Utama"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+
+                                    {/* Gradient Overlay */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        width: '677.66px',
+                                        height: '100%',
+                                        background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%)',
+                                        opacity: 0,
+                                        pointerEvents: 'none'
+                                    }}></div>
+
+                                    {/* Badge "UTAMA" (Kiri Atas) */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '24px',
+                                        left: '24px',
+                                        width: '99.56px',
+                                        height: '32px',
+                                        borderRadius: '9999px',
+                                        backgroundColor: '#002B6B',
+                                        padding: '8px 24px',
+                                        boxSizing: 'border-box',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center'
+                                    }}>
+                                        {/* Overlay + Shadow Badge */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            width: '100%',
+                                            height: '100%',
+                                            borderRadius: '9999px',
+                                            backgroundColor: '#FFFFFF01',
+                                            boxShadow: '0px 8px 10px -6px #0000001A, 0px 20px 25px -5px #0000001A, 0px 0px 0px 2px #FFFFFF33',
+                                            pointerEvents: 'none'
+                                        }}></div>
+
+                                        <span style={{
+                                            width: '51.56px',
+                                            height: '16px',
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 900,
+                                            fontSize: '12px',
+                                            lineHeight: '16px',
+                                            letterSpacing: '1.2px',
+                                            textTransform: 'uppercase',
+                                            color: '#FFFFFF',
+                                            textAlign: 'center',
+                                            zIndex: 1
+                                        }}>
+                                            UTAMA
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Text Container */}
+                                <div style={{
+                                    width: '678px',
+                                    height: '228px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '16px'
+                                }}>
+                                    {/* Tag & Date Container */}
+                                    <div style={{
+                                        width: '678px',
+                                        height: '28px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '16px'
+                                    }}>
+                                        {/* Tag "Berita Resmi" */}
+                                        <div style={{
+                                            height: '28px',
+                                            borderRadius: '9999px',
+                                            backgroundColor: '#002B6B1A',
+                                            padding: '6px 16px',
+                                            boxSizing: 'border-box',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center'
+                                        }}>
+                                            <span style={{
+                                                height: '16px',
+                                                fontFamily: 'Inter, sans-serif',
+                                                fontWeight: 700,
+                                                fontSize: '13px',
+                                                lineHeight: '120%',
+                                                color: '#002B6B',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                whiteSpace: 'nowrap'
+                                            }}>
+                                                BERITA RESMI
+                                            </span>
+                                        </div>
+
+                                        {/* Tanggal */}
+                                        <div style={{
+                                            height: '16px',
+                                            opacity: 0.6,
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
+                                            <span style={{
+                                                width: '80px',
+                                                height: '16px',
+                                                fontFamily: 'Inter, sans-serif',
+                                                fontWeight: 700,
+                                                fontSize: '13px',
+                                                lineHeight: '120%',
+                                                color: '#404040',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                whiteSpace: 'nowrap'
+                                            }}>
+                                                24 Mei 2024
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Judul Berita Utama */}
+                                    <div style={{
+                                        width: '678px',
+                                        height: '111px'
+                                    }}>
+                                        <h3 style={{
+                                            margin: 0,
+                                            width: '678px',
+                                            height: '111px',
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 700,
+                                            fontSize: '31px',
+                                            lineHeight: '120%',
+                                            color: '#000000',
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
+                                            Kampanye #TauRatingSeruGaming Diluncurkan untuk Tingkatkan Literasi Digital Keluarga
+                                        </h3>
+                                    </div>
+
+                                    {/* Deskripsi Singkat */}
+                                    <div style={{
+                                        width: '678px',
+                                        height: '57px',
+                                        opacity: 0.8
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            width: '678px',
+                                            height: '57px',
+                                            fontFamily: 'Poppins, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '16px',
+                                            lineHeight: '120%',
+                                            color: '#404040',
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
+                                            Kementerian Kominfo bersama para asosiasi gim Indonesia meresmikan kampanye nasional untuk mengedukasi orang tua tentang pentingnya mematuhi rating usia pada gim yang dimainkan anak.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Kanan: List Berita */}
+                            <div style={{
+                                width: '363px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '40px',
+                                paddingBottom: '112.23px',
+                                boxSizing: 'border-box'
+                            }}>
+                                {/* Item Berita 1 */}
+                                <div style={{
+                                    width: '363px',
+                                    height: '96px',
+                                    display: 'flex',
+                                    alignItems: 'center', // asumsi center vertikal
+                                    gap: '24px'
+                                }}>
+                                    {/* Thumbnail Container */}
+                                    <div style={{
+                                        width: '128px',
+                                        height: '96px',
+                                        borderRadius: '24px',
+                                        position: 'relative',
+                                        backgroundColor: '#FFFFFF01',
+                                        boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A',
+                                        overflow: 'hidden',
+                                        flexShrink: 0
+                                    }}>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80"
+                                            alt="Thumbnail Berita"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        />
+                                    </div>
+
+                                    {/* Text Container */}
+                                    <div style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        gap: '8px',
+                                        width: '222px', // Update width sesuai spesifikasi Figma
+                                        height: '96px'
+                                    }}>
+                                        {/* Tag */}
+                                        <span style={{
+                                            height: '12px',
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 700,
+                                            fontSize: '10px',
+                                            lineHeight: '120%',
+                                            color: '#006E1C',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            textTransform: 'uppercase'
+                                        }}>
+                                            PEMBARUAN
+                                        </span>
+
+                                        {/* Judul Berita Kecil */}
+                                        <h4 style={{ margin: 0, paddingTop: '2.5px', width: '222px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '16px', lineHeight: '120%', color: '#1A1B20' }}>Database IGRS Kini Mencakup Lebih dari 15.000</h4>
+
+                                        {/* Tanggal */}
+                                        <div style={{
+                                            width: '222px',
+                                            height: '12px',
+                                            opacity: 0.6,
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
+                                            <span style={{
+                                                width: '59px',
+                                                height: '12px',
+                                                fontFamily: 'Inter, sans-serif',
+                                                fontWeight: 500,
+                                                fontSize: '10px',
+                                                lineHeight: '120%',
+                                                color: '#404040',
+                                                display: 'flex',
+                                                alignItems: 'center'
+                                            }}>
+                                                18 Mei 2024
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Item Berita 2 */}
+                                <div style={{
+                                    width: '363px',
+                                    height: '96px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '24px'
+                                }}>
+                                    <div style={{ width: '128px', height: '96px', borderRadius: '24px', position: 'relative', backgroundColor: '#FFFFFF01', boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A', overflow: 'hidden', flexShrink: 0 }}>
+                                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="Thumbnail Berita" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '8px', width: '222px', height: '96px' }}>
+                                        <span style={{ height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '10px', lineHeight: '120%', color: '#002B6B', display: 'flex', alignItems: 'center', textTransform: 'uppercase' }}>TIPS & TRIK</span>
+                                        <h4 style={{ margin: 0, paddingTop: '2.5px', width: '222px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '16px', lineHeight: '120%', color: '#1A1B20' }}>Cara Memilih Gim yang Tepat untuk Tumbuh Kembang Anak</h4>
+                                        <div style={{ width: '222px', height: '12px', opacity: 0.6, display: 'flex', alignItems: 'center' }}>
+                                            <span style={{ height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#404040', display: 'flex', alignItems: 'center' }}>15 Mei 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Item Berita 3 */}
+                                <div style={{
+                                    width: '363px',
+                                    height: '96px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '24px'
+                                }}>
+                                    <div style={{ width: '128px', height: '96px', borderRadius: '24px', position: 'relative', backgroundColor: '#FFFFFF01', boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A', overflow: 'hidden', flexShrink: 0 }}>
+                                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=400&q=80" alt="Thumbnail Berita" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '8px', width: '222px', height: '96px' }}>
+                                        <span style={{ height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '10px', lineHeight: '120%', color: '#E85D04', display: 'flex', alignItems: 'center', textTransform: 'uppercase' }}>PENGUMUMAN</span>
+                                        <h4 style={{ margin: 0, paddingTop: '2.5px', width: '222px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '16px', lineHeight: '120%', color: '#1A1B20' }}>Pendaftaran Klasifikasi Gim Gelombang Kedua Resmi Dibuka</h4>
+                                        <div style={{ width: '222px', height: '12px', opacity: 0.6, display: 'flex', alignItems: 'center' }}>
+                                            <span style={{ height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#404040', display: 'flex', alignItems: 'center' }}>12 Mei 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Item Berita 4 */}
+                                <div style={{
+                                    width: '363px',
+                                    height: '96px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '24px'
+                                }}>
+                                    <div style={{ width: '128px', height: '96px', borderRadius: '24px', position: 'relative', backgroundColor: '#FFFFFF01', boxShadow: '0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A', overflow: 'hidden', flexShrink: 0 }}>
+                                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Thumbnail Berita" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '8px', width: '222px', height: '96px' }}>
+                                        <span style={{ height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '10px', lineHeight: '120%', color: '#006E1C', display: 'flex', alignItems: 'center', textTransform: 'uppercase' }}>PEMBARUAN</span>
+                                        <h4 style={{ margin: 0, paddingTop: '2.5px', width: '222px', fontFamily: 'Inter, sans-serif', fontWeight: 700, fontSize: '16px', lineHeight: '120%', color: '#1A1B20' }}>Integrasi Data IGRS dengan Platform Distribusi Global</h4>
+                                        <div style={{ width: '222px', height: '12px', opacity: 0.6, display: 'flex', alignItems: 'center' }}>
+                                            <span style={{ height: '12px', fontFamily: 'Inter, sans-serif', fontWeight: 500, fontSize: '10px', lineHeight: '120%', color: '#404040', display: 'flex', alignItems: 'center' }}>05 Mei 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <div style={{
+                width: '100%',
+                backgroundColor: '#1A428A',
+                display: 'flex',
+                justifyContent: 'center',
+                boxSizing: 'border-box'
+            }}>
+                <div style={{
+                    width: '1280px',
+                    height: '459px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    boxSizing: 'border-box'
+                }}>
+                    {/* Inner Container Footer */}
+                    <div style={{
+                        width: '1274px',
+                        height: '459px',
+                        backgroundColor: '#1B4685',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0 auto',
+                        boxSizing: 'border-box'
+                    }}>
+                        {/* Container Konten Footer */}
+                        <div style={{
+                            width: '1019px', // Dibulatkan dari 1019.19px
+                            height: '436px', // Dibulatkan dari 436.06px
+                            paddingTop: '80px',
+                            gap: '10px',
+                            margin: '0 auto',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            boxSizing: 'border-box'
+                        }}>
+                            {/* Baris 5 Kolom akan di sini */}
+                            <div style={{
+                                width: '1019px',
+                                height: '214px',
+                                display: 'flex',
+                                gap: '50px',
+                                boxSizing: 'border-box'
+                            }}>
+                                {/* Kolom 1: Logo & Teks */}
+                                <div style={{
+                                    width: '255px',
+                                    height: '208px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '10px',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    {/* Wadah 2 Logo */}
+                                    <div style={{
+                                        width: '255px', // Dibulatkan dari 254.79
+                                        height: '50px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '10px'
+                                    }}>
+                                        {/* Logo Komdigi */}
+                                        <div style={{
+                                            width: '67px',
+                                            height: '40px',
+                                            paddingRight: '10.67px',
+                                            borderRight: '0.67px solid #FFFFFF',
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
+                                            <img src="/assets/icons/LogoKomdigi.png" alt="Logo Komdigi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                        </div>
+
+                                        {/* Logo IGRS */}
+                                        <div style={{
+                                            width: '138.45px',
+                                            height: '50px',
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }}>
+                                            <img src="/assets/icons/LogoIgrsTeksPutih.png" alt="Logo IGRS" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                                        </div>
+                                    </div>
+
+                                    {/* Teks IGRS */}
+                                    <div style={{
+                                        width: '255px',
+                                        height: '148px',
+                                        paddingTop: '20px',
+                                        paddingBottom: '14px',
+                                        boxSizing: 'border-box'
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            width: '255px',
+                                            fontFamily: 'Poppins, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '16px',
+                                            lineHeight: '120%',
+                                            color: '#FFFFFF'
+                                        }}>
+                                            Indonesia Game Rating System (IGRS) merupakan pengklasifikasian Permainan Interaktif Elektronik (PIE) atau game berdasarkan konten dan kelompok usia pengguna.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Container Kolom-Kolom Navigasi */}
+                                <div style={{
+                                    width: '714px', // Dibulatkan dari 714.4
+                                    height: '214px', // Dibulatkan dari 214.39
+                                    display: 'flex',
+                                    gap: '10px',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    {/* Kolom Pintasan */}
+                                    <div style={{ width: '171px', height: '214px', display: 'flex', flexDirection: 'column', gap: '10px', boxSizing: 'border-box' }}>
+                                        <h3 style={{
+                                            margin: 0,
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '20px',
+                                            lineHeight: '120%',
+                                            color: '#FFFFFF'
+                                        }}>
+                                            Pintasan
+                                        </h3>
+
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            Beranda
+                                        </a>
+
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            Blog
+                                        </a>
+                                    </div>
+
+                                    {/* Kolom Informasi */}
+                                    <div style={{ width: '171px', height: '214px', display: 'flex', flexDirection: 'column', gap: '10px', boxSizing: 'border-box' }}>
+                                        <h3 style={{
+                                            margin: 0,
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '20px',
+                                            lineHeight: '120%',
+                                            color: '#FFFFFF'
+                                        }}>
+                                            Informasi
+                                        </h3>
+                                        
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            Tentang IGRS
+                                        </a>
+
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            Maklumat Pelayanan
+                                        </a>
+
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            Informasi Rating
+                                        </a>
+
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            FAQ
+                                        </a>
+                                    </div>
+
+                                    {/* Kolom Kontak */}
+                                    <div style={{ width: '171px', height: '214px', display: 'flex', flexDirection: 'column', gap: '10px', boxSizing: 'border-box' }}>
+                                        <h3 style={{
+                                            margin: 0,
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '20px',
+                                            lineHeight: '120%',
+                                            color: '#FFFFFF'
+                                        }}>
+                                            Kontak
+                                        </h3>
+                                        
+                                        <a href="#" style={{
+                                            fontFamily: 'Montserrat, sans-serif',
+                                            fontWeight: 600,
+                                            fontSize: '14px',
+                                            lineHeight: '22px',
+                                            letterSpacing: '0.32px',
+                                            color: '#D7ECFA',
+                                            textDecoration: 'none'
+                                        }}>
+                                            Hubungi Kami
+                                        </a>
+                                    </div>
+
+                                    {/* Kolom Alamat Kami */}
+                                    <div style={{ width: '171px', height: '187px', display: 'flex', flexDirection: 'column', gap: '10px', boxSizing: 'border-box' }}>
+                                        <h3 style={{
+                                            margin: 0,
+                                            fontFamily: 'Inter, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '20px',
+                                            lineHeight: '120%',
+                                            color: '#FFFFFF'
+                                        }}>
+                                            Alamat Kami
+                                        </h3>
+                                        
+                                        <p style={{
+                                            margin: 0,
+                                            width: '172px',
+                                            fontFamily: 'Poppins, sans-serif',
+                                            fontWeight: 500,
+                                            fontSize: '16px',
+                                            lineHeight: '120%',
+                                            color: '#D7ECFA'
+                                        }}>
+                                            Jl. Medan Merdeka Barat No.9, RT.002/RW.003, Gambir, Jakarta Pusat, DKI Jakarta 10110
+                                        </p>
+
+                                        {/* Telepon */}
+                                        <div style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            width: '140px',
+                                            height: '19px'
+                                        }}>
+                                            <div style={{
+                                                width: '26px',
+                                                height: '25.33px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'flex-start'
+                                            }}>
+                                                <img src="/assets/icons/IconTelepon.png" alt="Telepon" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
+                                            </div>
+                                            <span style={{
+                                                width: '114px',
+                                                fontFamily: 'Poppins, sans-serif',
+                                                fontWeight: 500,
+                                                fontSize: '16px',
+                                                lineHeight: '120%',
+                                                color: '#D7ECFA'
+                                            }}>
+                                                +62811806860
+                                            </span>
+                                        </div>
+
+                                        {/* Email */}
+                                        <div style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            width: '165px',
+                                            height: '19px'
+                                        }}>
+                                            <div style={{
+                                                width: '26px',
+                                                height: '25.33px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'flex-start'
+                                            }}>
+                                                <img src="/assets/icons/IconEmail.png" alt="Email" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
+                                            </div>
+                                            <span style={{
+                                                width: '139px',
+                                                fontFamily: 'Poppins, sans-serif',
+                                                fontWeight: 500,
+                                                fontSize: '16px',
+                                                lineHeight: '120%',
+                                                color: '#D7ECFA'
+                                            }}>
+                                                helpdesk@igrs.id
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Bagian Bawah Footer: Syarat & Ketentuan, dll */}
+                            <div style={{
+                                width: '1019px',
+                                height: '50px',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                boxSizing: 'border-box'
+                            }}>
+                                <a href="#" style={{
+                                    fontFamily: 'Montserrat, sans-serif',
+                                    fontWeight: 600,
+                                    fontSize: '16px',
+                                    lineHeight: '25.14px',
+                                    color: '#FFFFFF',
+                                    textDecoration: 'none',
+                                    textAlign: 'center'
+                                }}>
+                                    Syarat dan Ketentuan
+                                </a>
+
+                                {/* Garis Pemisah (Divider) */}
+                                <div style={{
+                                    height: '19px',
+                                    borderRight: '1px solid #FFFFFF', // Dibulatkan dari 0.67px
+                                    margin: '0 20px'
+                                }}></div>
+
+                                <a href="#" style={{
+                                    fontFamily: 'Montserrat, sans-serif',
+                                    fontWeight: 600,
+                                    fontSize: '16px',
+                                    lineHeight: '25.14px',
+                                    color: '#FFFFFF',
+                                    textDecoration: 'none',
+                                    textAlign: 'center'
+                                }}>
+                                    Kebijakan Privasi
+                                </a>
+                            </div>
+                            
+                            {/* Garis Horizontal Bawah */}
+                            <div style={{
+                                width: '713px', // Dibulatkan dari 713.43
+                                height: '11px',
+                                paddingTop: '10px',
+                                alignSelf: 'center',
+                                boxSizing: 'border-box'
+                            }}>
+                                <div style={{
+                                    width: '100%',
+                                    height: '1px',
+                                    opacity: 0.3,
+                                    backgroundColor: '#666666'
+                                }}></div>
+                            </div>
+                            
+                            {/* Bagian Copyright */}
+                            <div style={{
+                                width: '1019px',
+                                height: '50px',
+                                paddingBottom: '20px',
+                                boxSizing: 'border-box'
+                            }}>
+                                <div style={{
+                                    width: '100%',
+                                    height: '30px',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    <p style={{
+                                        margin: 0,
+                                        width: '705px',
+                                        fontFamily: 'Inter, sans-serif',
+                                        fontWeight: 500,
+                                        fontSize: '16px',
+                                        lineHeight: '120%',
+                                        color: '#FFFFFF',
+                                        textAlign: 'center'
+                                    }}>
+                                        © IGRS 2026 - Direktorat Jenderal Ekosistem Digital | Kementerian Komunikasi dan Digital RI
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
